@@ -6,6 +6,9 @@ user_name = getpass.getuser()
 
 shortcut_dir = "c:\\Users\\"+user_name+"\\AppData\\Roaming\Microsoft\\Windows\\Start Menu\\Programs\\Discord Inc\\Discord.lnk"
 discord_dir = "C:\\Users\\"+user_name+"\\AppData\\Local\\Discord\\Update.exe"
+steam_dir = "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Steam\\Steam.lnk"
+epic_dir = "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Epic Games Launcher.lnk"
+ubi_dir = "C:\\Users\\"+user_name+"\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Ubisoft\\Ubisoft Connect\\Ubisoft Connect.lnk"
 
 
 def discord_admin():
@@ -19,3 +22,14 @@ def discord():
 def vol_mix():
     subprocess.Popen('C:\Windows\System32\SndVol.exe', shell=True, stdin=subprocess.DEVNULL, stdout = subprocess.PIPE, stderr= subprocess.PIPE)
 
+def steam():
+    subprocess.Popen(steam_dir, shell=True, stdin=subprocess.DEVNULL, stdout = subprocess.PIPE, stderr= subprocess.PIPE)
+
+def epic():
+    subprocess.Popen(epic_dir, shell=True, stdin=subprocess.DEVNULL, stdout = subprocess.PIPE, stderr= subprocess.PIPE)
+
+def ubi():
+    subprocess.Popen(ubi_dir, shell=True, stdin=subprocess.DEVNULL, stdout = subprocess.PIPE, stderr= subprocess.PIPE)
+
+def task():
+    subprocess.Popen('taskmgr', shell=True, stdin=subprocess.DEVNULL, stdout = subprocess.PIPE, stderr= subprocess.PIPE)
