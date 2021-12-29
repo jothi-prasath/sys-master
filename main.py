@@ -1,5 +1,7 @@
 from tkinter import *
 import temp_delete1, temp_delete2, dns_cleaner, app
+import webbrowser
+import emoji
 
 from ctypes import windll
 windll.shcore.SetProcessDpiAwareness(1)
@@ -8,7 +10,25 @@ windll.shcore.SetProcessDpiAwareness(1)
 window = Tk()
 window.title("Sys Master")
 window.geometry('500x250')
+menubar = Menu(window)
 
+def callback(url):
+    webbrowser.open_new(url)
+
+def open_popup():
+   top= Toplevel(window)
+   top.geometry("280x100")
+   top.title("About")
+   heart_emoji = emoji.emojize(":red_heart:")
+   lbl = Label(top, text= "Made by Jothi Prasath", font=("Segoe UI", 15))
+   lbl.grid(column=0, row=0)
+   lbl = Label(top, text= heart_emoji, font=("Segoe UI", 15,),fg='red')
+   lbl.grid(column=1, row=0)
+   link1 = Label(top, text="Github", fg="blue", cursor="hand2")
+   link1.grid(column=0, row=1)
+   link1.bind("<Button-1>", lambda e: callback("https://github.com/jothi-prasath/"))
+
+menubar.add_command(label="About", command=open_popup)
 
 
 lbl = Label(window, text="Temp cleaner",font=('Arial',12))
@@ -60,5 +80,7 @@ lbl.grid(column=3, row=5)
 btn = Button(window, text="Run", width=8, command=app.ubi)
 btn.grid(column=4, row=5)
 
+user_name = Label(window, text = "Made by Jothi Prasath",font=('Arial',7)).place(x = 350,y = 220)  
 
+window.config(menu=menubar)
 window.mainloop()
