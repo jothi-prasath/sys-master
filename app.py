@@ -22,15 +22,6 @@ def discord():
 def vol_mix():
     subprocess.Popen('C:\Windows\System32\SndVol.exe', shell=True, stdin=subprocess.DEVNULL, stdout = subprocess.PIPE, stderr= subprocess.PIPE)
 
-def steam():
-    subprocess.Popen(steam_dir, shell=True, stdin=subprocess.DEVNULL, stdout = subprocess.PIPE, stderr= subprocess.PIPE)
-
-def epic():
-    subprocess.Popen(epic_dir, shell=True, stdin=subprocess.DEVNULL, stdout = subprocess.PIPE, stderr= subprocess.PIPE)
-
-def ubi():
-    subprocess.Popen(ubi_dir, shell=True, stdin=subprocess.DEVNULL, stdout = subprocess.PIPE, stderr= subprocess.PIPE)
-
 def task():
     subprocess.Popen('taskmgr', shell=True, stdin=subprocess.DEVNULL, stdout = subprocess.PIPE, stderr= subprocess.PIPE)
 
