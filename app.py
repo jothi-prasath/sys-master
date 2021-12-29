@@ -38,3 +38,6 @@ def update():
     subprocess.Popen('net stop wuauserv', shell=True, stdin=subprocess.DEVNULL, stdout = subprocess.PIPE, stderr= subprocess.PIPE)
     subprocess.Popen('net stop bits', shell=True, stdin=subprocess.DEVNULL, stdout = subprocess.PIPE, stderr= subprocess.PIPE)
     subprocess.Popen('net stop dosvc', shell=True, stdin=subprocess.DEVNULL, stdout = subprocess.PIPE, stderr= subprocess.PIPE)
+
+def mem():
+    subprocess.Popen('EmptyStandbyList.exe', shell=True, stdin=subprocess.DEVNULL, stdout = subprocess.PIPE, stderr= subprocess.PIPE)
