@@ -9,7 +9,7 @@ window = Tk()
 window.title("Sys Master")
 window.geometry('600x250')
 
-arrow = "--->"    
+ 
 
 lbl = Label(window, text="Temp cleaner\t",font=('Arial',12)).grid(column=0, row=0)
 btn = Button(window, text="Run", width=8, command=temp_delete1.run)
