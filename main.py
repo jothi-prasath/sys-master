@@ -11,8 +11,7 @@ window.geometry('700x200')
 
 arrow = "--->"    
 
-lbl = Label(window, text="Temp cleaner\t"+arrow,font=('Arial',13))
-lbl.grid(column=0, row=0)
+lbl = Label(window, text="Temp cleaner\t"+arrow,font=('Arial',13)).grid(column=0, row=0)
 btn = Button(window, text="Run", width=8, command=temp_delete1.run)
 btn.grid(column=1, row=0)
 lbl = Label(window, text="%Temp% cleaner\t"+arrow,font=('Arial',13))
@@ -35,6 +34,10 @@ lbl = Label(window, text="Discord with admin\t"+arrow,font=('Arial',13))
 lbl.grid(column=3, row=1)
 btn = Button(window, text="Run", width=8, command=app.discord_admin)
 btn.grid(column=4, row=1)
+lbl = Label(window, text="Volume master\t"+arrow,font=('Arial',13))
+lbl.grid(column=3, row=2)
+btn = Button(window, text="Run", width=8, command=app.vol_mix)
+btn.grid(column=4, row=2)
 
 
 window.mainloop()
