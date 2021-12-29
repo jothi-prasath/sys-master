@@ -11,7 +11,8 @@ window.geometry('600x250')
 
 
 
-lbl = Label(window, text="Temp cleaner\t",font=('Arial',12)).grid(column=0, row=0)
+lbl = Label(window, text="Temp cleaner\t",font=('Arial',12))
+lbl.grid(column=0, row=0)
 btn = Button(window, text="Run", width=8, command=temp_delete1.run)
 btn.grid(column=1, row=0)
 lbl = Label(window, text="%Temp% cleaner\t",font=('Arial',12))
