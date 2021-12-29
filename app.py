@@ -16,3 +16,6 @@ def discord():
     subprocess.Popen('taskkill /F /IM discord.exe', shell=True, stdin=subprocess.DEVNULL, stdout = subprocess.PIPE, stderr= subprocess.PIPE)
     subprocess.Popen('"%s" --processStart Discord.exe'% discord_dir, shell=True, stdin=subprocess.DEVNULL, stdout = subprocess.PIPE, stderr= subprocess.PIPE)
     
+def vol_mix():
+    subprocess.Popen('C:\Windows\System32\SndVol.exe', shell=True, stdin=subprocess.DEVNULL, stdout = subprocess.PIPE, stderr= subprocess.PIPE)
+
